@@ -1,2 +1,2 @@
-const joke = () => "i don't trust you because you are javaScript";
+const joke = () => "i don't hhh trust you because you are javaScript";
 export default joke;
