@@ -124,6 +124,7 @@ To get a local copy up and running, follow these steps.
   `npm run start` to open it in your browser
   `npm run dev` to open it in your browser
   `npm run build` if you want to edit something then after editing run this to build
+  for deployment use github pages
   ```
 
 
