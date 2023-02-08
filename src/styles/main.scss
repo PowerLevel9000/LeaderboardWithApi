@@ -1,3 +1,46 @@
-body {
-  background-color: unset;
+.main-content {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  gap: 10%;
+}
+
+.leaderboard-title-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.refresh-btn {
+  /* stylelint-disable */
+  height: fit-content; /* why it showing Invalid value for `height` as it is valid? */
+  /* stylelint-enable */
+  align-self: center;
+}
+
+.main-title-text {
+  text-align: center;
+}
+
+.score {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.score:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+  button {
+    width: 50%;
+    align-self: flex-end;
+  }
 }
