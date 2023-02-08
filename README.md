@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <!-- the change -->
 <div align="center">
-  <img src="./media/media/my-logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./media/my-logo.png" alt="logo" width="140"  height="auto" />
   <br/><br>
   <h1><b>Rat Leader Board</b></h1>
 
