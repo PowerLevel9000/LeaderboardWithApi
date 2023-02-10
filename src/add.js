@@ -1,4 +1,11 @@
 let id = 'Tobk4hm6O32zn1RQqpj8'
+
+const getData = async () => {
+  const recive = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Tobk4hm6O32zn1RQqpj8/scores/`);
+  const gettingData = await recive.json();
+  return gettingData;
+};
+
 const add = async (user, score) => {
   const ready = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Tobk4hm6O32zn1RQqpj8/scores/`, {
     method: 'POST',
@@ -12,4 +19,4 @@ const add = async (user, score) => {
   return scoreData;
 };
 
-export default add;
+export  {add, getData};
