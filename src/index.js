@@ -15,7 +15,6 @@ const sendingData = async (event) => {
   window.location.reload();
 };
 submitBtn.addEventListener('click', sendingData);
-// submitBtn.addEventListener('click', clearinput);
 submitBtn.addEventListener('click', disableButton);
 const refreshBtn = document.querySelector('.refresh-btn');
 //  refreshing the whole page
