@@ -655,23 +655,23 @@ const disableButton = () => {
   submitBtn.disabled = true;
   submitBtn.innerText = 'Posting...';
 };
-
+submitBtn.addEventListener('click', disableButton);
 const sendingData = async (event) => {
   event.preventDefault();
 
   const name = document.getElementById('name').value;
   const score = document.getElementById('score').value;
   const error = document.querySelector('small');
-  if (name.length > 20 || Number.isNaN(Number(score)) || score > 1000000) {
+  if (name.length > 20 || !Number.isNaN(Number(score)) || score > 1000000) {
     error.innerHTML = 'please enter valid score or name';
-    submitBtn.disabled = true;
+    submitBtn.disabled = false;
     submitBtn.innerText = 'Try again';
     return;
   }
   await (0,_add_js__WEBPACK_IMPORTED_MODULE_1__.add)(name, score);
   window.location.reload();
 };
-submitBtn.addEventListener('click', disableButton);
+
 submitBtn.addEventListener('click', sendingData);
 
 const refreshBtn = document.querySelector('.refresh-btn');
@@ -701,4 +701,4 @@ displayScores();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle36be610a5e4f8d554e38.js.map
+//# sourceMappingURL=bundlefd9794da417207084c8a.js.map
