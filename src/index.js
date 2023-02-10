@@ -2,12 +2,6 @@ import './styles/main.scss';
 import { add, getData } from './add.js';
 
 const submitBtn = document.getElementById('submit');
-// const clearinput = () => {
-//   let name = document.getElementById('name').value;
-//   let score = document.getElementById('score').value;
-//   name = '';
-//   score = '';
-// };
 
 const disableButton = () => {
   submitBtn.disabled = true;
