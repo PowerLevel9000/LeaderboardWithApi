@@ -1,4 +1,3 @@
-import joke from './joke.js';
 import './styles/main.scss';
 import add from './add.js';
 
