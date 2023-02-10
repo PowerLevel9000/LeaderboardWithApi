@@ -20,7 +20,7 @@
     <div class="clouds"></div>
 
     <header>
-      <div class="logo">Leader Board</div>
+      <div class="logo" onclick="window.location.reload()">Leader Board</div>
       <ul>
         <li id="leaderBoard">Score board</li>
         <div class="slash"></div>
@@ -31,9 +31,9 @@
     </header>
     <main class="main-section">
       <div class="main-section-title">
-        <h1 class="main-title-text">Leaderboard</h1>
-        <h1 class="main-title-text hidden">Add New Score</h1>
-        <h1 class="main-title-text hidden">Our Contact</h1>
+        <h1 id="boardTitle" class="main-title-text">Leaderboard</h1>
+        <h1 id="addTitle"class="main-title-text hidden">Add New Score</h1>
+        <h1 id="contactTitle" class="main-title-text hidden">Our Contact</h1>
       </div>
       <div class="main-content">
         <div class="leaderboard-container">
@@ -46,14 +46,13 @@
           </div>
         </div>
         <div class="form-container hidden">
-          <h3 class="form-title">Add your score</h3>
           <form>
             <input id="name" maxlength="15" class="name-input" requiered type="text" placeholder="Your name"
               autocomplete="off">
             <input id="score" min="0" max="10000" type="number" class="score-input" requiered type="text"
               placeholder="Your score" autocomplete="off">
             <small></small>
-            <button id="submit" class="submit-btn">Submit</button>
+            <button id="submit" class="refresh-btn submit-btn">Submit</button>
           </form>
         </div>
       </div>

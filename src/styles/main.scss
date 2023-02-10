@@ -136,6 +136,9 @@ header {
   justify-content: space-around;
   align-items: center;
   color: white;
+  .logo {
+    cursor: pointer;
+  }
 
   ul {
     width: 40%;
@@ -143,6 +146,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
+    cursor: pointer;
 
     div {
       width: 14px;
@@ -156,8 +160,9 @@ header {
 
 
 .leaderboard-container {
+  position: relative;
   width: 100%;
-  min-height: 70vh;
+  height: 70vh;
   background-color: rgba(249, 246, 238, 10%);
   color: white;
   border-radius: 50px;
@@ -165,6 +170,7 @@ header {
   -webkit-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
   -moz-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
   box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
+  overflow: scroll;
 
   .leaderboard {
     width: 70%;
@@ -193,6 +199,9 @@ header {
   }
 }
 
+.leaderboard-container::-webkit-scrollbar { 
+  display: none; 
+}
 .refresh-btn {
   /* stylelint-disable */
   height: fit-content;
@@ -250,11 +259,39 @@ header {
   border-bottom: 1px solid black;
 }
 
+.form-container {
+  display: flex;
+  width: 70%;
+  height: 50vh;
+}
+
 form {
   width: 100%;
   display: flex;
   gap: 10px;
   flex-direction: column;
+  margin: auto;
+  background-color: rgba(249, 246, 238, 10%);
+  color: white;
+  border-radius: 50px;
+  padding: 60px 20px;
+  -webkit-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
+  -moz-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
+  box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
+  
+  input {
+    height: 30px;
+    padding: 5px 10px;
+    background-color: rgba(104, 31, 222, 0.64);
+    color: whitesmoke;
+    font-size: large;
+    outline: none;
+    border: 0;
+  }
+  
+  input::placeholder {
+    font-style: italic;
+  }
 
   button {
     width: 50%;
