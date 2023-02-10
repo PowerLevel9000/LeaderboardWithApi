@@ -8,7 +8,7 @@
   <title>
     Rat Leader Board
   </title>
-<script defer src="bundlebfffe3c918fefd82a7a0.js"></script></head>
+<script defer src="bundle0c5c8f65ffb08057b38a.js"></script></head>
 
 <body>
   <main class="main-section">
@@ -29,8 +29,8 @@
       <div class="form-container">
         <h3 class="form-title">Add your score</h3>
         <form>
-          <input id="name" class="name-input" requiered type="text" placeholder="Your name">
-          <input id="score" class="score-input" requiered type="text" placeholder="Your score">
+          <input id="name" maxlength="15" class="name-input" requiered type="text" placeholder="Your name" autocomplete="off">
+          <input id="score" min="0" max="10000" type="number" class="score-input" requiered type="text" placeholder="Your score" autocomplete="off">
           <button id="submit" class="submit-btn">Submit</button>
         </form>
       </div>
