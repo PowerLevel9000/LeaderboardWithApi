@@ -1,7 +1,7 @@
 import joke from './joke.js';
 import './styles/main.scss';
 import add from './add.js';
-joke();
+
 const submitBtn = document.getElementById('submit');
 
 const sendingData = async (event) => {
