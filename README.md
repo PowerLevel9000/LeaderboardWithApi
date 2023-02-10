@@ -1,13 +1,15 @@
 <a name="readme-top"></a>
 <!-- the change -->
 <div align="center">
-  <img src="./media/media/my-logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./media/my-logo.png" alt="logo" width="140"  height="auto" />
   <br/><br>
   <h1><b>Rat Leader Board</b></h1>
 
   <br><br>
   
  </div>
+
+ <!-- game id : uVPZWLZ22mICWXKvSPwh -->
 
 <div align="center">
   <!-- <img src="./media/media/todo.png" alt="logo" width="100%"  height="auto" /> --> Loading app image
@@ -95,7 +97,7 @@
 
 > This link will guide you to my project
 
-Loading ...
+<a href ="https://powerlevel9000.github.io/LeaderboardWithApi/dist/">live link</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
