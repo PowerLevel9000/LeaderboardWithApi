@@ -1,3 +1,127 @@
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: -5;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -4;
+
+  -moz-animation: move-background 70s linear infinite;
+  -ms-animation: move-background 70s linear infinite;
+  -o-animation: move-background 70s linear infinite;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+
+}
+
+.clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+
+  -moz-animation: move-background 150s linear infinite;
+  -ms-animation: move-background 150s linear infinite;
+  -o-animation: move-background 150s linear infinite;
+  -webkit-animation: move-background 150s linear infinite;
+  animation: move-background 150s linear infinite;
+}
+
+img {
+  height: 70vh;
+  width: 70vh;
+  position: absolute;
+  z-index: -2;
+  right: 20px;
+}
+
 .main-content {
   width: 80%;
   display: flex;
@@ -11,6 +135,7 @@ header {
   height: 50px;
   justify-content: space-around;
   align-items: center;
+  color: white;
 
   ul {
     width: 40%;
@@ -22,7 +147,7 @@ header {
     div {
       width: 14px;
       height: 100%;
-      border: 1px solid black;
+      border: 1px solid gainsboro;
       transform: rotate(90deg);
     }
   }
@@ -32,7 +157,14 @@ header {
 
 .leaderboard-container {
   width: 100%;
-  height: 70vh;
+  min-height: 70vh;
+  background-color: rgba(249, 246, 238, 10%);
+  color: white;
+  border-radius: 50px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
+  -moz-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
+  box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
 
   .leaderboard {
     width: 70%;
@@ -42,6 +174,10 @@ header {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
+  .score:nth-child(-n+4):not(:first-of-type) {
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
   .leaderboard-title-container {
     width: 70%;
     display: flex;
@@ -49,7 +185,11 @@ header {
     align-items: center;
     gap: 20px;
     margin: auto;
+  }
 
+  span {
+    width: 20%;
+    overflow: hidden;
   }
 }
 
@@ -58,11 +198,40 @@ header {
   height: fit-content;
   /* why it showing Invalid value for `height` as it is valid? */
   /* stylelint-enable */
+  width: 150px;
   align-self: center;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 20px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #5bcedf, #f96161, #fc8f46, #36e494);
+  background-size: 400%;
+  border-radius: 30px;
+}
+
+.refresh-btn:hover {
+  animation: animate 8s linear infinite;
+}
+
+.refresh-btn:before {
+  background: linear-gradient(90deg, #5bcedf, #f96161, #fc8f46, #36e494);
+  background-size: 400px;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.refresh-btn:hover:before {
+  filter: blur(10px);
+  opacity: 1;
 }
 
 .main-title-text {
   text-align: center;
+  color: white;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
 .score:first-of-type {
@@ -74,6 +243,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .score:not(:last-of-type) {
