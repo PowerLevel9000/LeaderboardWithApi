@@ -97,7 +97,7 @@
 
 > This link will guide you to my project
 
-Loading ...
+<a href ="https://powerlevel9000.github.io/LeaderboardWithApi/dist/">live link</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

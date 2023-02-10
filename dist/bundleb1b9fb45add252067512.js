@@ -518,7 +518,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "add": () => (/* binding */ add),
 /* harmony export */   "getData": () => (/* binding */ getData)
 /* harmony export */ });
-const id = 'Tobk4hm6O32zn1RQqpj8';
+// just for saving the id
+// const id = 'Tobk4hm6O32zn1RQqpj8';
 
 const getData = async () => {
   const recive = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Tobk4hm6O32zn1RQqpj8/scores/');
@@ -629,12 +630,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const submitBtn = document.getElementById('submit');
-// const clearinput = () => {
-//   let name = document.getElementById('name').value;
-//   let score = document.getElementById('score').value;
-//   name = '';
-//   score = '';
-// };
 
 const disableButton = () => {
   submitBtn.disabled = true;
@@ -648,7 +643,6 @@ const sendingData = async (event) => {
   window.location.reload();
 };
 submitBtn.addEventListener('click', sendingData);
-// submitBtn.addEventListener('click', clearinput);
 submitBtn.addEventListener('click', disableButton);
 const refreshBtn = document.querySelector('.refresh-btn');
 //  refreshing the whole page
@@ -673,4 +667,4 @@ displayScores();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle0c5c8f65ffb08057b38a.js.map
+//# sourceMappingURL=bundleb1b9fb45add252067512.js.map
