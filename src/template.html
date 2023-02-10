@@ -8,24 +8,34 @@
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
+  <script src="https://kit.fontawesome.com/b89b7c8adf.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <header>
+    <div class="logo">Leader Board</div>
+    <ul>
+      <li>Score board</li><div class="slash"></div>
+      <li>Add Scores</li><div class="slash"></div>
+      <li>Contact</li>
+    </ul>
+  </header>
   <main class="main-section">
     <div class="main-section-title">
       <h1 class="main-title-text">Leaderboard</h1>
+      <h1 class="main-title-text hidden">Add New Score</h1>
     </div>
     <div class="main-content">
       <div class="leaderboard-container">
         <div class="leaderboard-title-container">
-          <h3 class="recent-scores-title">Recent scores</h3>
+          <h2 class="recent-scores-title">current leaders</h2>
           <button class="refresh-btn">Refresh</button>
         </div>
         <div class="leaderboard">
           <div class="score">Name: <span>Score</span></div>
         </div>
       </div>
-      <div class="form-container">
+      <div class="form-container hidden">
         <h3 class="form-title">Add your score</h3>
         <form>
           <input id="name" maxlength="15" class="name-input" requiered type="text" placeholder="Your name" autocomplete="off">

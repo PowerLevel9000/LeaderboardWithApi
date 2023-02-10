@@ -29,7 +29,7 @@ const displayScores = async () => {
   const descendingData = waitingData.result.sort((a, b) => b.score - a.score);
   descendingData.forEach((result) => {
     leaderboard.innerHTML += `
-    <div class="score">${result.user}: <span>${result.score}</span></div>
+    <div class="score">${result.user.toUpperCase()}  <span>${result.score}</span></div>
     `;
   });
 };
