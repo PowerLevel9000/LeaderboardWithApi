@@ -9,6 +9,8 @@
   
  </div>
 
+ <!-- game id : uVPZWLZ22mICWXKvSPwh -->
+
 <div align="center">
   <!-- <img src="./media/media/todo.png" alt="logo" width="100%"  height="auto" /> --> Loading app image
 </div>
@@ -95,7 +97,7 @@
 
 > This link will guide you to my project
 
-Loading ...
+<a href ="https://powerlevel9000.github.io/LeaderboardWithApi/dist/">live link</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

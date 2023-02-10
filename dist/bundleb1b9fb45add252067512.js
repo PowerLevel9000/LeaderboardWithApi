@@ -507,18 +507,40 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/joke.js":
-/*!*********************!*\
-  !*** ./src/joke.js ***!
-  \*********************/
+/***/ "./src/add.js":
+/*!********************!*\
+  !*** ./src/add.js ***!
+  \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "add": () => (/* binding */ add),
+/* harmony export */   "getData": () => (/* binding */ getData)
 /* harmony export */ });
-const joke = () => "i don't hhh trust you because you are javaScript";
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (joke);
+// just for saving the id
+// const id = 'Tobk4hm6O32zn1RQqpj8';
+
+const getData = async () => {
+  const recive = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Tobk4hm6O32zn1RQqpj8/scores/');
+  const gettingData = await recive.json();
+  return gettingData;
+};
+
+const add = async (user, score) => {
+  const ready = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Tobk4hm6O32zn1RQqpj8/scores/', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    body: JSON.stringify({ user, score }),
+
+  });
+  const scoreData = await ready.json();
+  return scoreData;
+};
+
+
 
 /***/ })
 
@@ -602,15 +624,47 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _joke_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./joke.js */ "./src/joke.js");
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _add_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add.js */ "./src/add.js");
 
 
 
-console.log((0,_joke_js__WEBPACK_IMPORTED_MODULE_0__["default"])());
+const submitBtn = document.getElementById('submit');
 
+const disableButton = () => {
+  submitBtn.disabled = true;
+  submitBtn.innerText = 'Posting...';
+};
+const sendingData = async (event) => {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const score = document.getElementById('score').value;
+  await (0,_add_js__WEBPACK_IMPORTED_MODULE_1__.add)(name, score);
+  window.location.reload();
+};
+submitBtn.addEventListener('click', sendingData);
+submitBtn.addEventListener('click', disableButton);
+const refreshBtn = document.querySelector('.refresh-btn');
+//  refreshing the whole page
+
+refreshBtn.addEventListener('click', () => {
+  window.location.reload();
+});
+
+const leaderboard = document.querySelector('.leaderboard');
+const displayScores = async () => {
+  const waitingData = await (0,_add_js__WEBPACK_IMPORTED_MODULE_1__.getData)();
+  const descendingData = waitingData.result.sort((a, b) => b.score - a.score);
+  descendingData.forEach((result) => {
+    leaderboard.innerHTML += `
+    <div class="score">${result.user}: <span>${result.score}</span></div>
+    `;
+  });
+};
+
+displayScores();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle505687f357642c0f2745.js.map
+//# sourceMappingURL=bundleb1b9fb45add252067512.js.map
