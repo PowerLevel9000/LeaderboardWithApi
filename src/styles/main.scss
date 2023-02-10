@@ -20,41 +20,41 @@
 
 @keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0, 0);
   }
 }
 
 @-webkit-keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0, 0);
   }
 }
 
 @-moz-keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0, 0);
   }
 }
 
 @-webkit-keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0, 0);
   }
 }
 
@@ -87,13 +87,11 @@
   top: 0;
   bottom: 0;
   z-index: -4;
-
   -moz-animation: move-background 70s linear infinite;
   -ms-animation: move-background 70s linear infinite;
   -o-animation: move-background 70s linear infinite;
   -webkit-animation: move-background 70s linear infinite;
   animation: move-background 70s linear infinite;
-
 }
 
 .clouds {
@@ -106,7 +104,6 @@
   top: 0;
   bottom: 0;
   z-index: -2;
-
   -moz-animation: move-background 150s linear infinite;
   -ms-animation: move-background 150s linear infinite;
   -o-animation: move-background 150s linear infinite;
@@ -136,6 +133,7 @@ header {
   justify-content: space-around;
   align-items: center;
   color: white;
+
   .logo {
     cursor: pointer;
   }
@@ -157,7 +155,21 @@ header {
   }
 }
 
+.score {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
 
+.score:first-of-type {
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+
+.score:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
 
 .leaderboard-container {
   position: relative;
@@ -167,9 +179,9 @@ header {
   color: white;
   border-radius: 50px;
   padding: 20px;
-  -webkit-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
-  -moz-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
-  box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
+  -webkit-box-shadow: 0 0 121px 10px rgba(104, 31, 222, 0.64);
+  -moz-box-shadow: 0 0 121px 10px rgba(104, 31, 222, 0.64);
+  box-shadow: 0 0 121px 10px rgba(104, 31, 222, 0.64);
   overflow: scroll;
 
   .leaderboard {
@@ -199,9 +211,10 @@ header {
   }
 }
 
-.leaderboard-container::-webkit-scrollbar { 
-  display: none; 
+.leaderboard-container::-webkit-scrollbar {
+  display: none;
 }
+
 .refresh-btn {
   /* stylelint-disable */
   height: fit-content;
@@ -224,7 +237,7 @@ header {
   animation: animate 8s linear infinite;
 }
 
-.refresh-btn:before {
+.refresh-btn::before {
   background: linear-gradient(90deg, #5bcedf, #f96161, #fc8f46, #36e494);
   background-size: 400px;
   border-radius: 40px;
@@ -232,7 +245,7 @@ header {
   transition: 0.5s;
 }
 
-.refresh-btn:hover:before {
+.refresh-btn:hover::before {
   filter: blur(10px);
   opacity: 1;
 }
@@ -241,22 +254,6 @@ header {
   text-align: center;
   color: white;
   animation: glow 1s ease-in-out infinite alternate;
-}
-
-.score:first-of-type {
-  font-weight: bolder;
-  margin-bottom: 15px;
-}
-
-.score {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.score:not(:last-of-type) {
-  border-bottom: 1px solid black;
 }
 
 .form-container {
@@ -275,10 +272,10 @@ form {
   color: white;
   border-radius: 50px;
   padding: 60px 20px;
-  -webkit-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
-  -moz-box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
-  box-shadow: 0px 0px 121px 10px rgba(104, 31, 222, 0.64);
-  
+  -webkit-box-shadow: 0 0 121px 10px rgba(104, 31, 222, 0.64);
+  -moz-box-shadow: 0 0 121px 10px rgba(104, 31, 222, 0.64);
+  box-shadow: 0 0 121px 10px rgba(104, 31, 222, 0.64);
+
   input {
     height: 30px;
     padding: 5px 10px;
@@ -288,7 +285,7 @@ form {
     outline: none;
     border: 0;
   }
-  
+
   input::placeholder {
     font-style: italic;
   }
