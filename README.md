@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <!-- the change -->
 <div align="center">
-  <img src="./src/media/my-logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./media/my-logo.png" alt="logo" width="140"  height="auto" />
   <br/><br>
   <h1><b>Rat Leader Board</b></h1>
 
@@ -209,7 +209,7 @@ If you like my Project give it a Star ✨🌟
 
 <!-- FAQ (optional) -->
 
-<!-- ## ❓ FAQ <a name="faq"></a>
+## ❓ FAQ <a name="faq"></a>
 
 > ask questions to be here 
 
@@ -221,7 +221,7 @@ If you like my Project give it a Star ✨🌟
 
   - [Answer_2]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
