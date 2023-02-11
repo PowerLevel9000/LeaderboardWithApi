@@ -210,7 +210,7 @@ If you like my Project give it a Star ✨🌟
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ <a name="faq"></a>
+<!-- ## ❓ FAQ <a name="faq"></a>
 
 > ask questions to be here 
 
@@ -222,7 +222,7 @@ If you like my Project give it a Star ✨🌟
 
   - [Answer_2]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- LICENSE -->
 
