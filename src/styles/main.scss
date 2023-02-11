@@ -103,12 +103,12 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: -2;
-  -moz-animation: move-background 150s linear infinite;
-  -ms-animation: move-background 150s linear infinite;
-  -o-animation: move-background 150s linear infinite;
-  -webkit-animation: move-background 150s linear infinite;
-  animation: move-background 150s linear infinite;
+  z-index: 0;
+  -moz-animation: move-background 50s linear infinite;
+  -ms-animation: move-background 50s linear infinite;
+  -o-animation: move-background 50s linear infinite;
+  -webkit-animation: move-background 50s linear infinite;
+  animation: move-background 50s linear infinite;
 }
 
 img {
@@ -133,6 +133,8 @@ header {
   justify-content: space-around;
   align-items: center;
   color: white;
+  position: relative;
+  z-index: 2;
 
   .logo {
     cursor: pointer;
@@ -281,6 +283,8 @@ form {
   -webkit-box-shadow: 0 0 121px 10px rgba(104, 31, 222, 0.64);
   -moz-box-shadow: 0 0 121px 10px rgba(104, 31, 222, 0.64);
   box-shadow: 0 0 121px 10px rgba(104, 31, 222, 0.64);
+  position: relative;
+  z-index: 1;
 
   input {
     height: 30px;
