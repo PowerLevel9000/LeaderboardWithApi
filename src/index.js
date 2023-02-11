@@ -38,7 +38,7 @@ const sendingData = async (event) => {
     error.innerHTML = 'please enter valid score or name';
     submitBtn.disabled = false;
     submitBtn.innerText = 'Try again';
-    setInterval(() =>  {window.location.reload()}, 2000)
+    setInterval(() => window.location.reload(), 2000)
     return;
   }
   await add(name, score);
