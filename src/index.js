@@ -9,41 +9,43 @@ const addTitle = document.getElementById('addTitle');
 const leaderboardContainer = document.querySelector('.leaderboard-container');
 const formContainer = document.querySelector('.form-container');
 
-navLeaderboard.addEventListener('click', () => {
-  boardTitle.classList.remove('hidden');
-  leaderboardContainer.classList.remove('hidden');
-  addTitle.classList.add('hidden');
-  formContainer.classList.add('hidden');
-});
+// navLeaderboard.addEventListener('click', () => {
+//   boardTitle.classList.remove('hidden');
+//   leaderboardContainer.classList.remove('hidden');
+//   addTitle.classList.add('hidden');
+//   formContainer.classList.add('hidden');
+// });
 
-navAddScore.addEventListener('click', () => {
-  boardTitle.classList.add('hidden');
-  leaderboardContainer.classList.add('hidden');
-  addTitle.classList.remove('hidden');
-  formContainer.classList.remove('hidden');
-});
+// navAddScore.addEventListener('click', () => {
+//   boardTitle.classList.add('hidden');
+//   leaderboardContainer.classList.add('hidden');
+//   addTitle.classList.remove('hidden');
+//   formContainer.classList.remove('hidden');
+// });
 
 const disableButton = () => {
   submitBtn.disabled = true;
   submitBtn.innerText = 'Posting...';
 };
-submitBtn.addEventListener('click', disableButton);
+
+
 const sendingData = async (event) => {
   event.preventDefault();
-
   const name = document.getElementById('name').value;
   const score = document.getElementById('score').value;
   const error = document.querySelector('small');
-  if (name.length > 20 || !Number.isNaN(Number(score)) || score > 1000000) {
-    error.innerHTML = 'please enter valid score or name';
+  const parsedScore = Number(score);
+  if (name.length > 20 || parsedScore > 1000000 || name.trim().length === 0) {
+    error.innerHTML = 'Please enter a valid score or name';
     submitBtn.disabled = false;
     submitBtn.innerText = 'Try again';
+    setInterval(() => window.location.reload(), 2000);
     return;
   }
-  await add(name, score);
+  disableButton();
+  await add(name, parsedScore);
   window.location.reload();
 };
-
 submitBtn.addEventListener('click', sendingData);
 
 const refreshBtn = document.querySelector('.refresh-btn');

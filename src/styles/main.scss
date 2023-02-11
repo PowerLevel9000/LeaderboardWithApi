@@ -258,8 +258,13 @@ header {
 
 .form-container {
   display: flex;
+  flex-direction: column;
+  color: white;
   width: 70%;
   height: 50vh;
+  h3 {
+    margin: auto;
+  }
 }
 
 form {
