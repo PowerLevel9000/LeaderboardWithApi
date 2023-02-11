@@ -58,10 +58,10 @@ const displayScores = async () => {
   const waitingData = await getData();
   const descendingData = waitingData.result
     .filter(
-      (a) => !isNaN(Number(a.score)) && a.score <= 1000000000 && a.user.length <= 20
+      (a) => !Number.isNaN(Number(a.score)) && a.score <= 1000000000 && a.user.length <= 20,
     )
     .sort((a, b) => Number(b.score) - Number(a.score));
-    
+
   descendingData.forEach((result) => {
     leaderboard.innerHTML += `
     <div class="score">${result.user.toUpperCase()}  <span>${result.score}</span></div>
