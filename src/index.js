@@ -2,15 +2,15 @@ import './styles/main.scss';
 import { add, getData } from './add.js';
 //  for now lets leave the contact
 const submitBtn = document.getElementById('submit');
-const navLeaderboard = document.getElementById('leaderBoard');
-const navAddScore = document.getElementById('addScores');
-const boardTitle = document.getElementById('boardTitle');
-const addTitle = document.getElementById('addTitle');
-const leaderboardContainer = document.querySelector('.leaderboard-container');
-const formContainer = document.querySelector('.form-container');
+// const navLeaderboard = document.getElementById('leaderBoard');
+// const navAddScore = document.getElementById('addScores');
+// const boardTitle = document.getElementById('boardTitle');
+// const addTitle = document.getElementById('addTitle');
+// const leaderboardContainer = document.querySelector('.leaderboard-container');
+// const formContainer = document.querySelector('.form-container');
 
 // disclamer all commented things are neccessary and i want to work
-// on it 
+// on it
 
 // navLeaderboard.addEventListener('click', () => {
 //   boardTitle.classList.remove('hidden');
@@ -30,7 +30,6 @@ const disableButton = () => {
   submitBtn.disabled = true;
   submitBtn.innerText = 'Posting...';
 };
-
 
 const sendingData = async (event) => {
   event.preventDefault();
