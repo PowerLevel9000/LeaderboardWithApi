@@ -302,6 +302,17 @@ form {
   }
 }
 
+.audio {
+  position: absolute;
+  z-index: 1;
+
+  button {
+    color: white;
+    font-size: large;
+    background-color: black;
+  }
+}
+
 .hidden {
   display: none;
 }
