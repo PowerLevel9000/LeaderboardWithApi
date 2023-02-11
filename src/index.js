@@ -9,6 +9,9 @@ const addTitle = document.getElementById('addTitle');
 const leaderboardContainer = document.querySelector('.leaderboard-container');
 const formContainer = document.querySelector('.form-container');
 
+// disclamer all commented things are neccessary and i want to work
+// on it 
+
 // navLeaderboard.addEventListener('click', () => {
 //   boardTitle.classList.remove('hidden');
 //   leaderboardContainer.classList.remove('hidden');
