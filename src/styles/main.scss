@@ -176,7 +176,7 @@ header {
 .leaderboard-container {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 65vh;
   background-color: rgba(249, 246, 238, 10%);
   color: white;
   border-radius: 50px;
@@ -306,14 +306,71 @@ form {
   }
 }
 
-.audio {
+.audio-controls {
   position: absolute;
-  z-index: 1;
+  bottom: 0;
+  right: 0;
 
-  button {
+  #playPauseBtn {
+    width: 100px;
+    height: 40px;
+    background-color: #8181d2;
     color: white;
-    font-size: large;
-    background-color: black;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #playPauseBtn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+  #muteBtn {
+    width: 100px;
+    height: 40px;
+    background-color: #0de8ce;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #muteBtn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+  #volumeControl {
+    width: 200px;
+    margin: 10px;
+    appearance: none;
+    background-color: #ddd;
+    height: 5px;
+    border-radius: 5px;
+  }
+
+  #volumeControl::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(25, 228, 15);
+    background: linear-gradient(90deg, rgba(25, 228, 15, 1) 54%, rgba(247, 1, 1, 1) 100%);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #volumeControl::-webkit-slider-thumb:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
   }
 }
 
