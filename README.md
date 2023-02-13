@@ -9,7 +9,7 @@
   
  </div>
 
-
+<!-- make it more responsiove -->
 <div align="center">
   <img src="./src/media/leaderboard.png" alt="logo" width="100%"  height="auto" />
 </div>
