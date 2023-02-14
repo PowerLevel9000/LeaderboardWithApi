@@ -30,6 +30,18 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(mp3)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'media/audio',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

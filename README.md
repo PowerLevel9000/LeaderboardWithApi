@@ -10,9 +10,8 @@
  </div>
 
 
-
 <div align="center">
-  <!-- <img src="./media/media/todo.png" alt="logo" width="100%"  height="auto" /> --> Loading app image
+  <img src="./src/media/leaderboard.png" alt="logo" width="100%"  height="auto" />
 </div>
 
 <!-- TABLE OF CONTENTS -->
