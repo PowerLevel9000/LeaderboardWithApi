@@ -140,13 +140,17 @@ header {
     cursor: pointer;
   }
 
+  nav,
   ul {
-    width: 40%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
-    cursor: pointer;
+    cursor: unset;
+
+    li {
+      cursor: pointer;
+    }
 
     div {
       width: 14px;
@@ -154,6 +158,13 @@ header {
       border: 1px solid gainsboro;
       transform: rotate(90deg);
     }
+  }
+}
+
+nav {
+  width: 40%;
+  ul {
+    width: 100%;
   }
 }
 

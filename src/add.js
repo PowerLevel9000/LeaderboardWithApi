@@ -1,9 +1,6 @@
-// just for saving the id
-// const id = 'Tobk4hm6O32zn1RQqpj8';
-
 const getData = async () => {
-  const recive = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Tobk4hm6O32zn1RQqpj8/scores/');
-  const gettingData = await recive.json();
+  const receive = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Tobk4hm6O32zn1RQqpj8/scores/');
+  const gettingData = await receive.json();
   return gettingData;
 };
 
