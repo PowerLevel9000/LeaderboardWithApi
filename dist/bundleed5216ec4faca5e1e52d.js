@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
@@ -8,6 +7,7 @@
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -34,6 +34,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "@keyframes animate {\n  0% {\n    back
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -128,6 +129,7 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -153,6 +155,7 @@ module.exports = function (item) {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -207,6 +210,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -320,6 +324,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -368,6 +373,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -388,6 +394,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -409,6 +416,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -488,6 +496,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -513,6 +522,7 @@ module.exports = styleTagTransform;
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "add": () => (/* binding */ add),
@@ -538,6 +548,74 @@ const add = async (user, score) => {
 };
 
 
+
+/***/ }),
+
+/***/ "./src/audio.js":
+/*!**********************!*\
+  !*** ./src/audio.js ***!
+  \**********************/
+/***/ (() => {
+
+const audio = document.getElementById('myAudio');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteBtn');
+const volumeControl = document.getElementById('volumeControl');
+
+playPauseBtn.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.loop = true;
+    audio.play();
+    playPauseBtn.innerHTML = 'Pause';
+  } else {
+    audio.pause();
+    playPauseBtn.innerHTML = 'Play';
+  }
+});
+
+muteBtn.addEventListener('click', () => {
+  if (audio.muted) {
+    audio.muted = false;
+    muteBtn.innerHTML = 'Mute';
+  } else {
+    audio.muted = true;
+    muteBtn.innerHTML = 'Unmute';
+  }
+});
+
+volumeControl.addEventListener('input', () => {
+  audio.volume = volumeControl.value;
+});
+
+
+/***/ }),
+
+/***/ "./src/navigation.js":
+/*!***************************!*\
+  !*** ./src/navigation.js ***!
+  \***************************/
+/***/ (() => {
+
+const navLeaderboard = document.getElementById('leaderBoard');
+const navAddScore = document.getElementById('addScores');
+const boardTitle = document.getElementById('boardTitle');
+const addTitle = document.getElementById('addTitle');
+const leaderboardContainer = document.querySelector('.leaderboard-container');
+const formContainer = document.querySelector('.form-container');
+
+navLeaderboard.addEventListener('click', () => {
+  boardTitle.classList.remove('hidden');
+  leaderboardContainer.classList.remove('hidden');
+  addTitle.classList.add('hidden');
+  formContainer.classList.add('hidden');
+});
+
+navAddScore.addEventListener('click', () => {
+  boardTitle.classList.add('hidden');
+  leaderboardContainer.classList.add('hidden');
+  addTitle.classList.remove('hidden');
+  formContainer.classList.remove('hidden');
+});
 
 /***/ })
 
@@ -615,73 +693,67 @@ const add = async (user, score) => {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _add_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add.js */ "./src/add.js");
+/* harmony import */ var _audio_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./audio.js */ "./src/audio.js");
+/* harmony import */ var _audio_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_audio_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _add_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./add.js */ "./src/add.js");
+/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navigation.js */ "./src/navigation.js");
+/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_navigation_js__WEBPACK_IMPORTED_MODULE_3__);
 
 
-//  for now lets leave the contact
+
+
+
 const submitBtn = document.getElementById('submit');
-const navLeaderboard = document.getElementById('leaderBoard');
-const navAddScore = document.getElementById('addScores');
-const boardTitle = document.getElementById('boardTitle');
-const addTitle = document.getElementById('addTitle');
-const leaderboardContainer = document.querySelector('.leaderboard-container');
-const formContainer = document.querySelector('.form-container');
 
-navLeaderboard.addEventListener('click', () => {
-  boardTitle.classList.remove('hidden');
-  leaderboardContainer.classList.remove('hidden');
-  addTitle.classList.add('hidden');
-  formContainer.classList.add('hidden');
-});
-
-navAddScore.addEventListener('click', () => {
-  boardTitle.classList.add('hidden');
-  leaderboardContainer.classList.add('hidden');
-  addTitle.classList.remove('hidden');
-  formContainer.classList.remove('hidden');
-});
-
+// disable button on submission and wait for posting data
 const disableButton = () => {
   submitBtn.disabled = true;
   submitBtn.innerText = 'Posting...';
 };
-submitBtn.addEventListener('click', disableButton);
+
+//  Posting A data
 const sendingData = async (event) => {
   event.preventDefault();
 
   const name = document.getElementById('name').value;
   const score = document.getElementById('score').value;
   const error = document.querySelector('small');
-  if (name.length > 20 || score > 1000000) {
+  if (name.length > 20 || score > 1000000 || name.trim().length === 0) {
     error.innerHTML = 'please enter valid score or name';
-    submitBtn.disabled = false;
+    submitBtn.disabled = true;
     submitBtn.innerText = 'Try again';
-    setInterval(() => window.location.reload(), 2000);
-    return;
+  } else {
+    await (0,_add_js__WEBPACK_IMPORTED_MODULE_2__.add)(name, score);
+    window.location.reload();
   }
-  await (0,_add_js__WEBPACK_IMPORTED_MODULE_1__.add)(name, score);
-  window.location.reload();
 };
 
+document.getElementById('name').addEventListener('focus', () => {
+  submitBtn.disabled = false;
+  submitBtn.innerText = 'Submit';
+});
+
+submitBtn.addEventListener('click', disableButton);
 submitBtn.addEventListener('click', sendingData);
 
+//  refresh page button
 const refreshBtn = document.querySelector('.refresh-btn');
-//  refreshing the whole page
-
 refreshBtn.addEventListener('click', () => {
   window.location.reload();
 });
 
-const leaderboard = document.querySelector('.leaderboard');
+//  displaying the score we have
 const displayScores = async () => {
-  const waitingData = await (0,_add_js__WEBPACK_IMPORTED_MODULE_1__.getData)();
+  const leaderboard = document.querySelector('.leaderboard');
+  const waitingData = await (0,_add_js__WEBPACK_IMPORTED_MODULE_2__.getData)();
   const descendingData = waitingData.result
     .filter(
       (a) => !Number.isNaN(Number(a.score)) && a.score <= 1000000000 && a.user.length <= 20,
@@ -696,38 +768,9 @@ const displayScores = async () => {
 };
 
 displayScores();
-const audio = document.getElementById('myAudio');
-const playPauseBtn = document.getElementById('playPauseBtn');
-const muteBtn = document.getElementById('muteBtn');
-const volumeControl = document.getElementById('volumeControl');
-
-playPauseBtn.addEventListener('click', () => {
-  if (audio.paused) {
-    audio.loop = true;
-    audio.play();
-    playPauseBtn.innerHTML = 'Pause';
-  } else {
-    audio.pause();
-    playPauseBtn.innerHTML = 'Play';
-  }
-});
-
-muteBtn.addEventListener('click', () => {
-  if (audio.muted) {
-    audio.muted = false;
-    muteBtn.innerHTML = 'Mute';
-  } else {
-    audio.muted = true;
-    muteBtn.innerHTML = 'Unmute';
-  }
-});
-
-volumeControl.addEventListener('input', () => {
-  audio.volume = volumeControl.value;
-});
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlecde1489d604547cac52d.js.map
+//# sourceMappingURL=bundleed5216ec4faca5e1e52d.js.map

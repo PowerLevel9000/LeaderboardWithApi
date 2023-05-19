@@ -1,61 +1,50 @@
 import './styles/main.scss';
+import './audio.js';
 import { add, getData } from './add.js';
-//  for now lets leave the contact
+import './navigation.js';
+
 const submitBtn = document.getElementById('submit');
-const navLeaderboard = document.getElementById('leaderBoard');
-const navAddScore = document.getElementById('addScores');
-const boardTitle = document.getElementById('boardTitle');
-const addTitle = document.getElementById('addTitle');
-const leaderboardContainer = document.querySelector('.leaderboard-container');
-const formContainer = document.querySelector('.form-container');
 
-navLeaderboard.addEventListener('click', () => {
-  boardTitle.classList.remove('hidden');
-  leaderboardContainer.classList.remove('hidden');
-  addTitle.classList.add('hidden');
-  formContainer.classList.add('hidden');
-});
-
-navAddScore.addEventListener('click', () => {
-  boardTitle.classList.add('hidden');
-  leaderboardContainer.classList.add('hidden');
-  addTitle.classList.remove('hidden');
-  formContainer.classList.remove('hidden');
-});
-
+// disable button on submission and wait for posting data
 const disableButton = () => {
   submitBtn.disabled = true;
   submitBtn.innerText = 'Posting...';
 };
-submitBtn.addEventListener('click', disableButton);
+
+//  Posting A data
 const sendingData = async (event) => {
   event.preventDefault();
 
   const name = document.getElementById('name').value;
   const score = document.getElementById('score').value;
   const error = document.querySelector('small');
-  if (name.length > 20 || score > 1000000) {
+  if (name.length > 20 || score > 1000000 || name.trim().length === 0) {
     error.innerHTML = 'please enter valid score or name';
-    submitBtn.disabled = false;
+    submitBtn.disabled = true;
     submitBtn.innerText = 'Try again';
-    setInterval(() => window.location.reload(), 2000);
-    return;
+  } else {
+    await add(name, score);
+    window.location.reload();
   }
-  await add(name, score);
-  window.location.reload();
 };
 
+document.getElementById('name').addEventListener('focus', () => {
+  submitBtn.disabled = false;
+  submitBtn.innerText = 'Submit';
+});
+
+submitBtn.addEventListener('click', disableButton);
 submitBtn.addEventListener('click', sendingData);
 
+//  refresh page button
 const refreshBtn = document.querySelector('.refresh-btn');
-//  refreshing the whole page
-
 refreshBtn.addEventListener('click', () => {
   window.location.reload();
 });
 
-const leaderboard = document.querySelector('.leaderboard');
+//  displaying the score we have
 const displayScores = async () => {
+  const leaderboard = document.querySelector('.leaderboard');
   const waitingData = await getData();
   const descendingData = waitingData.result
     .filter(
@@ -71,32 +60,3 @@ const displayScores = async () => {
 };
 
 displayScores();
-const audio = document.getElementById('myAudio');
-const playPauseBtn = document.getElementById('playPauseBtn');
-const muteBtn = document.getElementById('muteBtn');
-const volumeControl = document.getElementById('volumeControl');
-
-playPauseBtn.addEventListener('click', () => {
-  if (audio.paused) {
-    audio.loop = true;
-    audio.play();
-    playPauseBtn.innerHTML = 'Pause';
-  } else {
-    audio.pause();
-    playPauseBtn.innerHTML = 'Play';
-  }
-});
-
-muteBtn.addEventListener('click', () => {
-  if (audio.muted) {
-    audio.muted = false;
-    muteBtn.innerHTML = 'Mute';
-  } else {
-    audio.muted = true;
-    muteBtn.innerHTML = 'Unmute';
-  }
-});
-
-volumeControl.addEventListener('input', () => {
-  audio.volume = volumeControl.value;
-});
