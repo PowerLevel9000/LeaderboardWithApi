@@ -124,26 +124,26 @@ In order to edit this project you need:
  - An IDE
 
 #### Suggested IDE
- - visual studio code `I prefer this one 🙃🙃`
- - atom 
+ - Visual studio code `I prefer this one 🙃🙃`
+ - Atom 
  - Sublime 
  - IntelliJ IDEA
- - visual code 
+ - Visual code 
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-- open your terminal there (bash cmd powershell run etc...) and run `npm i` to install node modules
+- Open your terminal there (bash cmd powershell run etc...) and run `npm i` to install node modules
 - `npm run dev` or `npm run start` this will open project in browser
 - If you to edit something edit in src dir and then run in terminal `npm run build` to build it for production
 
-- before deployment have some linter check 
+- Before deployment have some linter check 
   - [ ] `npx stylelint "**/*.{css,scss}"` for css and saas file
   - [ ] `npx eslint .` for js files
   - [ ] `npx hint .` for html files 
 
-- after fixing error build deploy for production
+- After fixing error build deploy for production
 ### Usage
 
 - For displaying the Leading Score and scorer
@@ -152,7 +152,7 @@ Clone this repository to your desired folder:
 
 ### Run tests
 
-- currently, this Project don't have any Unit test
+- Currently, this Project don't have any Unit test
 - You can do manual checking
   - Score added properly
   - Form validation for score and scorer work properly 
@@ -161,7 +161,7 @@ Clone this repository to your desired folder:
 
 You can deploy this project using:
 
-- for this repo and use git hub pages to deploy it 
+- For this repo and use git hub pages to deploy it 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,8 +183,8 @@ You can deploy this project using:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Improved Navigation Bar**
-- [ ] **improve functionality**
-- [ ] **improve styling**
+- [ ] **Improve functionality**
+- [ ] **Improve styling**
 - [ ] **Responsive Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
