@@ -127,6 +127,14 @@ img {
   gap: 10%;
 }
 
+nav {
+  width: 40%;
+
+  ul {
+    width: 100%;
+  }
+}
+
 header {
   display: flex;
   height: 50px;
@@ -158,13 +166,6 @@ header {
       border: 1px solid gainsboro;
       transform: rotate(90deg);
     }
-  }
-}
-
-nav {
-  width: 40%;
-  ul {
-    width: 100%;
   }
 }
 
