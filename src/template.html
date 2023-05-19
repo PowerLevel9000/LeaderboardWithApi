@@ -12,22 +12,22 @@
 </head>
 
 <body>
-
   <div class="background-container">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
     <div class="stars"></div>
     <div class="twinkling"></div>
     <div class="clouds"></div>
-
     <header>
       <div class="logo" onclick="window.location.reload()">Leader Board</div>
-      <ul>
-        <li id="leaderBoard">Score board</li>
-        <div class="slash"></div>
-        <li id="addScores">Add Scores</li>
-        <div class="slash"></div>
-        <li id="contact">Contact</li>
-      </ul>
+      <nav>
+        <ul>
+          <li id="leaderBoard">Score board</li>
+          <div class="slash"></div>
+          <li id="addScores">Add Scores</li>
+          <div class="slash"></div>
+          <li id="contact">Contact</li>
+        </ul>
+      </nav>
     </header>
     <main class="main-section">
       <div class="main-section-title">
@@ -47,9 +47,9 @@
         </div>
         <div class="form-container hidden">
           <form>
-            <input id="name" maxlength="15" class="name-input" requiered type="text" placeholder="Your name"
+            <input id="name" maxlength="15" class="name-input" required type="text" placeholder="Your name"
               autocomplete="off">
-            <input id="score" min="0" max="10000" type="number" class="score-input" requiered type="text"
+            <input id="score" min="0" max="10000" type="number" class="score-input" required type="text"
               placeholder="Your score" autocomplete="off">
             <small></small>
             <button id="submit" class="refresh-btn submit-btn">Submit</button>
@@ -67,7 +67,6 @@
     <button id="muteBtn">Mute/Unmute</button>
     <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
   </div>
-
 
 </body>
 

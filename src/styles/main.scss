@@ -127,6 +127,14 @@ img {
   gap: 10%;
 }
 
+nav {
+  width: 40%;
+
+  ul {
+    width: 100%;
+  }
+}
+
 header {
   display: flex;
   height: 50px;
@@ -140,13 +148,17 @@ header {
     cursor: pointer;
   }
 
+  nav,
   ul {
-    width: 40%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
-    cursor: pointer;
+    cursor: unset;
+
+    li {
+      cursor: pointer;
+    }
 
     div {
       width: 14px;
