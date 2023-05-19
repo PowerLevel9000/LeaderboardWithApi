@@ -6,15 +6,15 @@ const leaderboardContainer = document.querySelector('.leaderboard-container');
 const formContainer = document.querySelector('.form-container');
 
 navLeaderboard.addEventListener('click', () => {
-    boardTitle.classList.remove('hidden');
-    leaderboardContainer.classList.remove('hidden');
-    addTitle.classList.add('hidden');
-    formContainer.classList.add('hidden');
+  boardTitle.classList.remove('hidden');
+  leaderboardContainer.classList.remove('hidden');
+  addTitle.classList.add('hidden');
+  formContainer.classList.add('hidden');
 });
 
 navAddScore.addEventListener('click', () => {
-    boardTitle.classList.add('hidden');
-    leaderboardContainer.classList.add('hidden');
-    addTitle.classList.remove('hidden');
-    formContainer.classList.remove('hidden');
+  boardTitle.classList.add('hidden');
+  leaderboardContainer.classList.add('hidden');
+  addTitle.classList.remove('hidden');
+  formContainer.classList.remove('hidden');
 });

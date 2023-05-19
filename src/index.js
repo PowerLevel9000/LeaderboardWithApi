@@ -1,7 +1,7 @@
 import './styles/main.scss';
-import './audio.js'
+import './audio.js';
 import { add, getData } from './add.js';
-import './navigation.js'
+import './navigation.js';
 
 const submitBtn = document.getElementById('submit');
 
@@ -11,7 +11,7 @@ const disableButton = () => {
   submitBtn.innerText = 'Posting...';
 };
 
-//  Posting A data 
+//  Posting A data
 const sendingData = async (event) => {
   event.preventDefault();
 
@@ -30,8 +30,8 @@ const sendingData = async (event) => {
 
 document.getElementById('name').addEventListener('focus', () => {
   submitBtn.disabled = false;
-  submitBtn.innerText = 'Submit'
-})
+  submitBtn.innerText = 'Submit';
+});
 
 submitBtn.addEventListener('click', disableButton);
 submitBtn.addEventListener('click', sendingData);
