@@ -144,6 +144,11 @@ Clone this repository to your desired folder:
   - [ ] `npx hint .` for html files 
 
 - After fixing error build deploy for production
+
+### Install 
+```
+npm i 
+```
 ### Usage
 
 - For displaying the Leading Score and scorer
