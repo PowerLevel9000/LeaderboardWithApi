@@ -91,8 +91,7 @@ Following features you should observe
 <!-- - **** -->
 - **You can add your scores**
 - **You can check others Scores**
-- **you can play music locally only** 
-> need to work on music feature as it work only locally if you could help you contribution will be makable so that it can work on live page too
+- **you can play** 
 - **Animation of the page working properly with glow effect**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -136,7 +135,7 @@ Clone this repository to your desired folder:
 
 - Open your terminal there (bash cmd powershell run etc...) and run `npm i` to install node modules
 - `npm run dev` or `npm run start` this will open project in browser
-- If you to edit something edit in src dir and then run in terminal `npm run build` to build it for production
+- If you want to edit something edit in src dir and then run in terminal `npm run build` to build it for production
 
 - Before deployment have some linter check 
   - [ ] `npx stylelint "**/*.{css,scss}"` for css and saas file
@@ -166,7 +165,7 @@ npm i
 
 You can deploy this project using:
 
-- For this repo and use git hub pages to deploy it 
+- For this repo and use gh pages to deploy it 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
